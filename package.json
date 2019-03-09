@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "npm run build && next start"
   },
   "dependencies": {
     "next": "^8.0.3",
