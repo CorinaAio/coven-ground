@@ -1,0 +1,8 @@
+@mixin bg-gradient-variant($parent, $color1, $color2) {
+  #{$parent} {
+    background: linear-gradient($color1, $color2);
+  }
+}
+
+@include bg-gradient-variant(".bg-gradient-down", $bg-gradient-dark, $bg-gradient-light);
+@include bg-gradient-variant(".bg-gradient-up", $bg-gradient-light, $bg-gradient-dark);

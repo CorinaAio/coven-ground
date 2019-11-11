@@ -1,0 +1,10 @@
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin-top: 105px;
+  background-image: linear-gradient(to bottom, $gray-100 0%, #fff 100%);
+  min-height: 100vh;
+}

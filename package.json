@@ -1,29 +1,42 @@
 {
   "name": "coven-ground",
+  "description": "Coven ground website",
   "version": "1.0.0",
-  "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "npm run build && next start"
-  },
+  "author": "Corina Aionitoaie <aio.corina@gmail.com> ",
   "dependencies": {
-    "next": "^8.0.3",
-    "npm": "^6.8.0",
-    "react": "^16.8.3",
-    "react-dom": "^16.8.3"
+    "bootstrap": "^4.3.1",
+    "gatsby": "^2.0.0",
+    "gatsby-image": "^2.0.5",
+    "gatsby-plugin-google-analytics": "^2.0.5",
+    "gatsby-plugin-intl": "^0.3.1",
+    "gatsby-plugin-offline": "^2.0.5",
+    "gatsby-plugin-react-helmet": "^3.1.13",
+    "gatsby-plugin-sass": "^2.1.20",
+    "gatsby-plugin-typography": "^2.2.0",
+    "gatsby-source-contentful": "^2.0.1",
+    "gatsby-transformer-remark": "^2.1.1",
+    "lodash": "^4.17.14",
+    "node-sass": "^4.13.0",
+    "react": "^16.3.1",
+    "react-bootstrap": "^1.0.0-beta.14",
+    "react-dom": "^16.3.1",
+    "react-helmet": "^5.2.1",
+    "react-typography": "^0.16.3",
+    "slash": "^2.0.0",
+    "typography": "^0.16.7",
+    "typography-breakpoint-constants": "^0.15.0"
   },
-  "description": "",
-  "main": "index.js",
-  "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/CorinaAio/coven-ground.git"
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "main": "n/a",
+  "resolutions": {
+    "contentful": "6.1.0"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/CorinaAio/coven-ground/issues"
-  },
-  "homepage": "https://github.com/CorinaAio/coven-ground#readme"
+  "scripts": {
+    "develop": "gatsby develop",
+    "build": "gatsby build",
+    "start": "gatsby serve"
+  }
 }

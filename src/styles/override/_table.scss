@@ -1,0 +1,17 @@
+.table {
+  border: 1px solid #dee2e6;
+
+  th {
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  td {
+    vertical-align: middle;
+  }
+
+  thead th,
+  thead td {
+    border-bottom: 1px solid #dee2e6;
+  }
+}

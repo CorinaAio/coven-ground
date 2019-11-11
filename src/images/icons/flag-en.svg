@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="15px" viewBox="0 0 20 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>GB</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="20" height="15"></rect>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Navigation" transform="translate(-1420.000000, -43.000000)">
+            <g transform="translate(0.000000, -1.000000)" id="GB">
+                <g transform="translate(1420.000000, 44.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="background" fill="#22438B" xlink:href="#path-1"></use>
+                    <polygon id="band" fill="#FFFFFF" mask="url(#mask-2)" points="2.10526312 -4.3691557e-08 -0.0277549477 0.0304236652 2.38427077e-08 2.3076923 17.8755378 15.0324052 20.0197664 14.989694 19.980802 12.7247136"></polygon>
+                    <polygon id="band" fill="#C7152A" mask="url(#mask-2)" points="1.0526316 1.93569509e-08 -3.50375691e-08 1.15384609 18.9473678 14.9999995 20.0000007 13.8461544"></polygon>
+                    <path d="M17.8947368,1.62153656e-08 L20,-7.51686412e-09 L20.0000001,2.30769227 C20.0000001,2.30769227 7.63227636,10.8417834 2.12446125,15.0324058 C2.05749859,15.0833544 0.021370142,15.0360728 0.021370142,15.0360728 L-0.142315743,12.8396872 L17.8947368,1.62153656e-08 L17.8947368,1.62153656e-08 Z" id="band" fill="#FFFFFF" mask="url(#mask-2)"></path>
+                    <polygon id="band" fill="#C7152A" mask="url(#mask-2)" points="18.9924782 -0.0321114434 20 1.15384615 1.05263126 15.0000003 8.85210819e-09 13.8461538"></polygon>
+                    <polygon id="cross" fill="#FFFFFF" mask="url(#mask-2)" points="7.36842105 0 12.6315789 0 12.6315789 4.61538462 20 4.61538462 20 10.3846154 12.6315789 10.3846154 12.6315789 15 7.36842105 15 7.36842105 10.3846154 0 10.3846154 0 4.61538462 7.36842105 4.61538462"></polygon>
+                    <polygon id="cross" fill="#C7152A" mask="url(#mask-2)" points="8.42105263 0 11.5789474 0 11.5789474 5.76923077 20 5.76923077 20 9.23076923 11.5789474 9.23076923 11.5789474 15 8.42105263 15 8.42105263 9.23076923 0 9.23076923 0 5.76923077 8.42105263 5.76923077"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

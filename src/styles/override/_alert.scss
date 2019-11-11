@@ -1,0 +1,11 @@
+.alert-dismissible {
+  position: fixed;
+  bottom: 0;
+  z-index: 5;
+  right: 20px;
+
+  .close {
+    border: none;
+    background: none;
+  }
+}

@@ -1,0 +1,7 @@
+@mixin bg-gradient-down() {
+  background: linear-gradient($bg-gradient-dark, $bg-gradient-light);
+}
+
+@mixin bg-gradient-up() {
+  background: linear-gradient($bg-gradient-light, $bg-gradient-dark);
+}

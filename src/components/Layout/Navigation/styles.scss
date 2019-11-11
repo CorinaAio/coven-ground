@@ -1,0 +1,79 @@
+@import "../../../styles/_base";
+
+.navigation {
+  background-color: $secondary;
+  &.navigation--open {
+    @include media-breakpoint-down(lg) {
+      background-color: $white;
+    }
+  }
+
+  &__menu {
+    opacity: 1;
+    transition: min-height 0.5s, opacity 0.5s;
+    min-height: 110px;
+    padding: 0 40px;
+    margin: auto;
+
+    @include media-breakpoint-down(lg) {
+      padding: 5px 20px;
+      min-height: auto;
+    }
+
+    &--hidden:not(:hover) {
+      opacity: 0;
+    }
+
+    &--sticky {
+      min-height: 80px;
+      padding: 0 40px;
+      // background-color: $gray-100;
+      box-shadow: 0 1px 1px -1px $border-color;
+
+      @include media-breakpoint-down(lg) {
+        padding: 5px 20px;
+        min-height: auto;
+      }
+    }
+  }
+
+  &__logo {
+    height: 55px;
+
+    @include media-breakpoint-down(lg) {
+      height: 50px;
+    }
+  }
+
+  &__mobile {
+    display: flex;
+    align-items: center;
+  }
+
+  &__locale-switcher {
+    position: absolute;
+    right: 0;
+  }
+
+  &__locale-switcher--mobile {
+    display: none;
+  }
+
+  @include media-breakpoint-down(lg) {
+    &__locale-switcher {
+      display: none;
+    }
+
+    &__locale-switcher--mobile {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__cta {
+    @include media-breakpoint-down(lg) {
+      width: 100%;
+      margin: 20px 0;
+    }
+  }
+}

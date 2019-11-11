@@ -1,0 +1,31 @@
+.btn {
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  -webkit-appearance: none;
+  white-space: nowrap;
+  font-weight: bold;
+
+  @include media-breakpoint-down(sm) {
+    padding: 12px;
+  }
+}
+
+.btn-group-toggle .btn {
+  text-transform: initial;
+  line-height: 19px;
+  letter-spacing: 0.55px;
+  cursor: pointer;
+
+  &.focus,
+  &.active,
+  &:focus,
+  &:active {
+    box-shadow: none !important;
+  }
+
+  font-size: 16px;
+
+  @include media-breakpoint-down(sm) {
+    font-size: 14px;
+  }
+}

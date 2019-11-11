@@ -1,0 +1,8 @@
+.carousel-indicators li {
+  border-radius: 100%;
+}
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  width: $carousel-control-icon-width;
+  height: $carousel-control-icon-height;
+}
