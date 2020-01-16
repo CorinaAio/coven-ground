@@ -1,6 +1,6 @@
 #hexGrid {
 	position: relative;
-	width: 60%;
+	width: 100%;
 	margin: 0 auto;
 	padding: 0; /* Clears unordered list default of 40px */
 }
@@ -15,8 +15,8 @@
 	list-style-type: none;
 	position: relative;
 	float: left;
-	width: 27.85714285714286%;
-	padding: 0 0 32.16760145166612% 0;
+	width: 21%;
+	padding: 0 0 24.2494226328% 0;
 	-o-transform: rotate(-60deg) skewY(30deg);
 	-moz-transform: rotate(-60deg) skewY(30deg);
 	-webkit-transform: rotate(-60deg) skewY(30deg);
@@ -25,20 +25,19 @@
 	background: #fd005f;
 	overflow: hidden;
 	visibility: hidden;
+	margin: 0.5%;
 
 	& * {
 		visibility: visible;
 	}
 
-	&:nth-child(3n + 2) {
-		margin: 0 1%;
-	}
+	// &:nth-child(3n + 2) {
+	// 	margin: 0 1%;
+	// }
 
-	&:nth-child(6n + 4),
-	&:nth-child(6n + 5),
-	&:nth-child(6n + 6) {
-		margin-top: -6.9285714285%;
-		margin-bottom: -6.9285714285%;
+	&:nth-child(7n + 1),
+	&:nth-child(7n + 2),
+	&:nth-child(7n + 3) {
 		-o-transform: translateX(50%) rotate(-60deg) skewY(30deg);
 		-moz-transform: translateX(50%) rotate(-60deg) skewY(30deg);
 		-webkit-transform: translateX(50%) rotate(-60deg) skewY(30deg);
@@ -46,8 +45,25 @@
 		transform: translateX(50%) rotate(-60deg) skewY(30deg);
 	}
 
-	&:nth-child(6n + 4) {
-		margin-left: 0.5%;
+	&:nth-child(7n + 4),
+	&:nth-child(7n + 5),
+	&:nth-child(7n + 6),
+	&:nth-child(7n + 7) {
+		margin-top: -5.8%;
+		margin-bottom: -5.8%;
+		-o-transform: translateX(28.5%) rotate(-60deg) skewY(30deg);
+		-moz-transform: translateX(28.5%) rotate(-60deg) skewY(30deg);
+		-webkit-transform: translateX(28.5%) rotate(-60deg) skewY(30deg);
+		-ms-transform: translateX(28.5%) rotate(-60deg) skewY(30deg);
+		transform: translateX(28.5%) rotate(-60deg) skewY(30deg);
+	}
+
+	&:nth-child(7n + 1) {
+		margin-left: 7%;
+	}
+
+	&:nth-child(7n + 3) {
+		margin-right: 7%;
 	}
 }
 
