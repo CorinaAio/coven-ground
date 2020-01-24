@@ -1,0 +1,16 @@
+@import '../../../node_modules/react-awesome-slider/dist/styles.css';
+@import "../../styles/_base";
+
+.awssld__controls__arrow-left, .awssld__controls__arrow-right{
+    &:before, &:after {
+        background: white;
+    }
+}
+
+.awssld__bullets .awssld__bullets--active {
+    background: $pink;
+}
+
+.awssld__bar {
+    background-color: $pink;
+}

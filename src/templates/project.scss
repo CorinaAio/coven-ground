@@ -1,0 +1,56 @@
+@import "../styles/_base";
+
+.project-block {
+	height: 100%;
+    padding-bottom: 120px;
+    margin-top: -45px;
+    background: white;
+    @include media-breakpoint-up(xl) {
+		margin-top: -41px;
+    }
+    
+   
+}
+
+.project-container {
+    max-width: 1200px;
+
+    .project__gallery {
+        padding-top: 60px;
+    }
+
+    .project__title {
+        padding-top: 60px;
+    }
+
+	.project__detail {
+		display: flex;
+		flex-direction: column;
+
+		> span:first-child {
+			font-weight: bold;
+		}
+	}
+}
+
+.block-quote {
+    font-style: italic;
+    color: dimgray;
+    position: relative;
+    margin: 0 30px;
+
+    &__start, &__close {
+        width: 30px;
+        position: absolute;
+    }
+
+    &__close {
+        right: 0;
+        bottom: 10px;
+        transform: rotate(180deg);
+    }
+
+    &__content {
+        padding: 30px 40px;
+    }
+}

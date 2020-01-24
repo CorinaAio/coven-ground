@@ -29,28 +29,26 @@ exports.createPages = ({ graphql, actions }) => {
 			throw result.errors;
 		}
 
-		console.log("RES", result);
-
-		// // Create Product pages
-		// const productTemplate = path.resolve(`./src/pages/index.js`);
-		// // We want to create a detailed page for each
-		// // product node. We'll just use the Contentful id for the slug.
-		// _.each(result.data.allContentfulProject.edges, (edge) => {
-		// 	// Gatsby uses Redux to manage its internal state.
-		// 	// Plugins and sites can use functions like "createPage"
-		// 	// to interact with Gatsby.
-		// 	createPage({
-		// 		// Each page is required to have a `path` as well
-		// 		// as a template component. The `context` is
-		// 		// optional but is often necessary so the template
-		// 		// can query data specific to each page.
-		// 		path: `/project/${edge.node.id}/`,
-		// 		component: slash(productTemplate),
-		// 		context: {
-		// 			id: edge.node.id
-		// 		}
-		// 	});
-		// });
+		// Create Product pages
+		const projectTemplate = path.resolve(`./src/templates/project.js`);
+		// We want to create a detailed page for each
+		// product node. We'll just use the Contentful id for the slug.
+		_.each(result.data.allContentfulProject.edges, (edge) => {
+			// Gatsby uses Redux to manage its internal state.
+			// Plugins and sites can use functions like "createPage"
+			// to interact with Gatsby.
+			createPage({
+				// Each page is required to have a `path` as well
+				// as a template component. The `context` is
+				// optional but is often necessary so the template
+				// can query data specific to each page.
+				path: `/project/${edge.node.id}/`,
+				component: slash(projectTemplate),
+				context: {
+					id: edge.node.id
+				}
+			});
+		});
 	});
 	// .then(() => {
 	//   graphql(

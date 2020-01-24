@@ -166,3 +166,11 @@ input[type="number"] {
 html, body {
   height: 100%;
 }
+
+a {
+  color: $pink;
+
+  &:hover {
+    color: $pink;
+  }
+}

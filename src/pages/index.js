@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 import { Col, Container } from 'react-bootstrap';
 import Layout from '../components/Layout/Layout';
 import SEO from '../components/SEO/SEO';
@@ -11,7 +11,8 @@ import './index.scss';
 const logo = require(`../images/coven-logo.svg`);
 
 const IndexPage = ({ intl, data }) => {
-	const {formatMessage} = intl;
+	const { formatMessage } = intl;
+	console.log(data);
 	const projectEdges = data[intl.locale].edges;
 
 	return (
@@ -23,7 +24,7 @@ const IndexPage = ({ intl, data }) => {
 
 			<section className="home-logo-block">
 				<Col className="justify-content-center d-flex">
-					<img className="home-logo-block__logo" src={logo} />
+					<img className="home-logo-block__logo" src={logo} alt="logo" />
 				</Col>
 				<Container fluid className="projects-container">
 					<Projects projects={projectEdges} />
@@ -49,7 +50,7 @@ export const pageQuery = graphql`
 					}
 				}
 			}
-		},
+		}
 		en: allContentfulProject(filter: { node_locale: { eq: "en-US" } }) {
 			edges {
 				node {

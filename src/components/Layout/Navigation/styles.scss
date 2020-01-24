@@ -11,14 +11,8 @@
 	&__menu {
 		opacity: 1;
 		transition: min-height 0.5s, opacity 0.5s;
-		min-height: 110px;
-		padding: 0 40px;
+		padding: 10px 40px;
 		margin: auto;
-
-		@include media-breakpoint-down(lg) {
-			padding: 5px 20px;
-			min-height: auto;
-		}
 
 		&--hidden:not(:hover) {
 			opacity: 0;
