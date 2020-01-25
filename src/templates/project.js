@@ -5,7 +5,6 @@ import SEO from '../components/SEO/SEO';
 import Layout from '../components/Layout/Layout';
 import { Col, Container, Row } from 'react-bootstrap';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
-import Img from 'gatsby-image';
 import './project.scss';
 import { BLOCKS } from '@contentful/rich-text-types';
 import { injectIntl } from 'gatsby-plugin-intl';
@@ -19,12 +18,11 @@ const propTypes = {
 const quoteIcon = require(`../images/icons/quote_icon.svg`);
 
 function ProjectTemplate(props) {
-	const { formatMessage } = props.intl;
+	const { formatMessage, formatDate } = props.intl;
 	const options = {
 		renderNode: {
 			[BLOCKS.UL_LIST]: (node) => {
 				const list = node.content.map(elem => {
-					console.log(elem.content[0].content[0])
 					return elem.content[0].content[0].value
 				})
 				return <BulletList listItems={list}/>
@@ -77,7 +75,7 @@ function ProjectTemplate(props) {
 							</div>
 							<div className="project__detail">
 								<span>{formatMessage({ id: 'project_date' })}</span>
-								<span>{date}</span>
+								<span>{formatDate(date, {day: 'numeric', month: 'long', year: 'numeric'})}</span>
 							</div>
 						</Col>
 					</Row>
