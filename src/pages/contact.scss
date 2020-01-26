@@ -1,0 +1,89 @@
+@import "../styles/base";
+
+.contact-page {
+	background-image: url("../images/home-background.jpg");
+	height: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin-top: -45px;
+	padding-bottom: 120px;
+
+	@include media-breakpoint-up(xl) {
+		margin-top: -41px;
+	}
+
+	.contact-page-container {
+		max-width: 1200px;
+
+		h1 {
+			text-align: center;
+		}
+	}
+
+	&__description {
+		text-align: center;
+		font-size: 18px;
+	}
+
+	&__details {
+		display: flex;
+		justify-content: center;
+		font-size: 20px;
+
+		&__icon {
+			z-index: 2;
+			> svg {
+				width: 3.5em;
+				height: 3.5em;
+			}	
+		}
+
+		& .hexagon {
+			z-index: 1;
+			position: relative;
+			width: 300px; 
+			height: 173.21px;
+			background-color: transparent;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: 30px 0;
+			@include media-breakpoint-up(sm) {
+				border-left: solid 5px $pink;
+				border-right: solid 5px $pink;
+				margin: 86.60px 0;
+			}
+
+			&:before,
+			&:after {
+				content: "";
+				position: absolute;
+				z-index: 1;
+				width: 212.13px;
+				height: 212.13px;
+				-webkit-transform: scaleY(0.5774) rotate(-45deg);
+				-ms-transform: scaleY(0.5774) rotate(-45deg);
+				transform: scaleY(0.5774) rotate(-45deg);
+				background-color: inherit;
+				left: 38.9340px;
+			}
+
+			&:before {
+				top: -106.0660px;
+				@include media-breakpoint-up(sm) {
+					border-top: solid 7.0711px $pink;
+					border-right: solid 7.0711px $pink;
+				}
+			}
+
+			&:after {
+				bottom: -106.0660px;
+				@include media-breakpoint-up(sm) { 
+					border-bottom: solid 7.0711px $pink;
+					border-left: solid 7.0711px $pink;
+				}
+				
+			}
+		}
+	}
+}

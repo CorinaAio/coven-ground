@@ -8,10 +8,12 @@
 	"about__meta-title": "Despre",
 	"about__meta-description": "Despre descriere",
 	"contact__meta-title": "Contact",
-	"contact__meta-description": "Contact descriere",
+	"contact__meta-description": "Pagină de contact coven ground",
 	"blog__meta-title": "Blog",
 	"blog__meta-description": "Blog descriere",
 	"project_client": "Client",
 	"project_date": "Data",
-	"project_place": "Locatie"
+	"project_place": "Locatie",
+	"contact__title": "Contactați-ne",
+	"contact__description": "Dacă doriți să vă ajutăm cu un proiect, ne puteți contacta pe unul din conturile noastre"
 }

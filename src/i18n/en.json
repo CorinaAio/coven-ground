@@ -8,10 +8,12 @@
 	"about__meta-title": "About",
 	"about__meta-description": "About description",
 	"contact__meta-title": "Get in touch",
-	"contact__meta-description": "Contact description",
+	"contact__meta-description": "Get in touch with coven ground",
 	"blog__meta-title": "Blog",
 	"blog__meta-description": "Blog description",
 	"project_place": "Location",
 	"project_client": "Client",
-	"project_date": "Date"
+	"project_date": "Date",
+	"contact__title": "Get in touch",
+	"contact__description": "If you want us to help you with a project, you can contact us on one of your accounts"
 }
