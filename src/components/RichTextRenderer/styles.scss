@@ -1,0 +1,21 @@
+.block-quote {
+    font-style: italic;
+    color: dimgray;
+    position: relative;
+    margin: 0 30px;
+
+    &__start, &__close {
+        width: 30px;
+        position: absolute;
+    }
+
+    &__close {
+        right: 0;
+        bottom: 10px;
+        transform: rotate(180deg);
+    }
+
+    &__content {
+        padding: 30px 40px;
+    }
+}

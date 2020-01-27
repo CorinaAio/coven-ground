@@ -29,7 +29,7 @@ exports.createPages = ({ graphql, actions }) => {
 			throw result.errors;
 		}
 
-		// Create Product pages
+		// Create Project pages
 		const projectTemplate = path.resolve(`./src/templates/project.js`);
 		// We want to create a detailed page for each
 		// product node. We'll just use the Contentful id for the slug.
@@ -49,45 +49,46 @@ exports.createPages = ({ graphql, actions }) => {
 				}
 			});
 		});
-	});
-	// .then(() => {
-	//   graphql(
-	//     `
-	//       {
-	//         allContentfulCategory(limit: 1000) {
-	//           edges {
-	//             node {
-	//               id
-	//             }
-	//           }
-	//         }
-	//       }
-	//     `
-	//   ).then(result => {
-	//     if (result.errors) {
-	//       throw result.errors;
-	//     }
+	})
+	.then(() => {
+	  graphql(
+	    `
+	      {
+	        allContentfulBlog(limit: 1000, sort: {fields: date, order: DESC}) {
+	          edges {
+	            node {
+				  id
+				  date
+	            }
+	          }
+	        }
+	      }
+	    `
+	  ).then(result => {
+	    if (result.errors) {
+	      throw result.errors;
+	    }
 
-	//     // Create Category pages
-	//     const categoryTemplate = path.resolve(`./src/templates/category.js`);
-	//     // We want to create a detailed page for each
-	//     // category node. We'll just use the Contentful id for the slug.
-	//     _.each(result.data.allContentfulCategory.edges, edge => {
-	//       // Gatsby uses Redux to manage its internal state.
-	//       // Plugins and sites can use functions like "createPage"
-	//       // to interact with Gatsby.
-	//       createPage({
-	//         // Each page is required to have a `path` as well
-	//         // as a template component. The `context` is
-	//         // optional but is often necessary so the template
-	//         // can query data specific to each page.
-	//         path: `/categories/${edge.node.id}/`,
-	//         component: slash(categoryTemplate),
-	//         context: {
-	//           id: edge.node.id
-	//         }
-	//       });
-	//     });
-	// });
-	// });
+	    // Create Blog pages
+	    const blogTemplate = path.resolve(`./src/templates/blog.js`);
+	    // We want to create a detailed page for each
+	    // category node. We'll just use the Contentful id for the slug.
+	    _.each(result.data.allContentfulBlog.edges, edge => {
+	      // Gatsby uses Redux to manage its internal state.
+	      // Plugins and sites can use functions like "createPage"
+	      // to interact with Gatsby.
+	      createPage({
+	        // Each page is required to have a `path` as well
+	        // as a template component. The `context` is
+	        // optional but is often necessary so the template
+	        // can query data specific to each page.
+	        path: `/blog/${edge.node.id}/`,
+	        component: slash(blogTemplate),
+	        context: {
+	          id: edge.node.id
+	        }
+	      });
+	    });
+	});
+	});
 };
