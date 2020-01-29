@@ -10,6 +10,7 @@ const BlogPage = ({ intl, data }) => {
 	const { formatMessage, locale, formatDate } = intl;
 	const blogPosts = data[locale].edges.map((edge) => edge.node);
 	const placeholderImg = require(`../images/default-blog.jpg`);
+	const noBlogPostsImg = require('../images/no-blog-posts.png');
 
 	const getBgImage = (gallery) => {
 		if (!gallery) return placeholderImg;
@@ -26,26 +27,36 @@ const BlogPage = ({ intl, data }) => {
 			/>
 			<section className="blog-posts-wrapper">
 				<Container fluid className="blog-posts-container">
-					{blogPosts.map((blogPost) => {
-						const { title, id, heading, date, gallery } = blogPost;
-						return (
-							<div className="blog-posts__item">
-								<div className="hexagon" style={{ backgroundImage: `url(${getBgImage(gallery)})` }}>
-									<div className="hexTop" />
-									<div className="hexBottom" />
+					{(!blogPosts || blogPosts.length === 0) && (
+						<div className="noposts-wrapper">
+							<img src={noBlogPostsImg} />
+							<p>{formatMessage({ id: 'blog_no_blog_posts' })}</p>
+						</div>
+					)}
+					{blogPosts &&
+						blogPosts.length > 0 &&
+						blogPosts.map((blogPost) => {
+							const { title, id, heading, date, gallery } = blogPost;
+							return (
+								<div className="blog-posts__item">
+									<div className="hexagon" style={{ backgroundImage: `url(${getBgImage(gallery)})` }}>
+										<div className="hexTop" />
+										<div className="hexBottom" />
+									</div>
+									<div className="blog-posts__item__description">
+										<Link to={`/blog/${id}`}>
+											<h3>{title}</h3>
+										</Link>
+										<span>{heading}</span>
+										<p>
+											<i>
+												{formatDate(date, { day: 'numeric', month: 'long', year: 'numeric' })}
+											</i>
+										</p>
+									</div>
 								</div>
-								<div className="blog-posts__item__description">
-									<Link to={`/blog/${id}`}>
-										<h3>{title}</h3>
-									</Link>
-									<span>{heading}</span>
-									<p>
-										<i>{formatDate(date, { day: 'numeric', month: 'long', year: 'numeric' })}</i>
-									</p>
-								</div>
-							</div>
-						);
-					})}
+							);
+						})}
 				</Container>
 			</section>
 		</Layout>

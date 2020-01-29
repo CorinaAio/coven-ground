@@ -1,74 +1,73 @@
 @import "../../../styles/_base";
 
 .footer {
-  font-weight: 500;
-  border-top: 1px solid $border-color;
-  height: 60px;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  position: relative;
-  
-  &__copyright {
-    font-size: 12px;
-    opacity: 0.6;
-  }
+	font-weight: 500;
+	border-top: 1px solid $border-color;
+	height: 60px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	position: relative;
 
-  &__links {
-    padding: 4px;
-  }
+	&__copyright {
+		font-size: 12px;
+		opacity: 0.6;
+	}
 
-  &__social-link {
-    &:not(:first-child) {
-      padding-left: 0;
-    }
-  }
+	&__links {
+		padding: 4px;
+	}
 
-  &__title {
-    font-weight: 600;
-  }
+	&__social-link {
+		&:not(:first-child) {
+			padding-left: 0;
+		}
+	}
 
-  &__company-info {
-    margin-top: 14px;
-    font-size: 14px;
-  }
+	&__title {
+		font-weight: 600;
+	}
 
-  &__form {
-    margin-bottom: 8.5rem;
+	&__company-info {
+		margin-top: 14px;
+		font-size: 14px;
+	}
 
-    @include media-breakpoint-down(sm) {
-      margin-bottom: 2.5rem;
-    }
-  }
+	&__form {
+		margin-bottom: 8.5rem;
 
-  &__copyright-wraper {
-    @include media-breakpoint-up(md) {
-      position: absolute;
-      bottom: 0;
-      margin-bottom: 61px;
-    }
-  }
+		@include media-breakpoint-down(sm) {
+			margin-bottom: 2.5rem;
+		}
+	}
 
-  &__icons {
-    display: flex;
-    justify-content: space-between;
+	&__copyright-wraper {
+		@include media-breakpoint-up(md) {
+			position: absolute;
+			bottom: 0;
+			margin-bottom: 61px;
+		}
+	}
 
-    @include media-breakpoint-down(xs) {
-      padding: 0 50px;
-    }
-  }
+	&__icons {
+		display: flex;
+		justify-content: space-between;
 
-  &__icon {
-    width: 20%;
-    height: auto;
-  }
+		@include media-breakpoint-down(xs) {
+			padding: 0 50px;
+		}
+	}
 
-  &__contacts {
-    font-size: 13px;
+	&__icon {
+		width: 20%;
+		height: auto;
+	}
 
-    @include media-breakpoint-up(sm) {
-      font-size: inherit;
-    }
-  }
+	&__contacts {
+		font-size: 13px;
+
+		@include media-breakpoint-up(sm) {
+			font-size: inherit;
+		}
+	}
 }

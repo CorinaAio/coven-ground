@@ -10,22 +10,22 @@ $primary: $pink;
 $secondary: $light-grey;
 
 @function calculateRem($size) {
-  $remSize: $size / 16px;
-  @return #{$remSize}rem;
+	$remSize: $size / 16px;
+	@return #{$remSize}rem;
 }
 
 // Spacing
 //
 $spacer: 1rem;
 $spacers: (
-  0: 0,
-  1: calculateRem(4px),
-  2: calculateRem(8px),
-  3: calculateRem(16px),
-  4: calculateRem(40px),
-  5: calculateRem(80px),
-  6: calculateRem(100px),
-  7: calculateRem(120px)
+	0: 0,
+	1: calculateRem(4px),
+	2: calculateRem(8px),
+	3: calculateRem(16px),
+	4: calculateRem(40px),
+	5: calculateRem(80px),
+	6: calculateRem(100px),
+	7: calculateRem(120px)
 );
 
 // Typography
@@ -154,23 +154,27 @@ $modal-inner-padding: 1.8rem 2rem;
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  /* display: none; <- Crashes Chrome on hover */
-  -webkit-appearance: none;
-  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+	/* display: none; <- Crashes Chrome on hover */
+	-webkit-appearance: none;
+	margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 }
 
 input[type="number"] {
-  -moz-appearance: textfield; /* Firefox */
+	-moz-appearance: textfield; /* Firefox */
 }
 
-html, body {
-  height: 100%;
+html,
+body {
+	// height: 100%;
+	height: unset;
 }
-
+body {
+	min-height: unset;
+}
 a {
-  color: $pink;
+	color: $pink;
 
-  &:hover {
-    color: $pink;
-  }
+	&:hover {
+		color: $pink;
+	}
 }

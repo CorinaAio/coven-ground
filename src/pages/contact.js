@@ -31,15 +31,18 @@ const AboutPage = ({ intl: { formatMessage }, data }) => {
 					<Row>
 						<Col className="contact-page__details">
 							<div className="hexagon">
-                <a href="mailto:covenground@yahoo.com" className="contact-page__details__icon">
-                  <EmailIcon /> 
-                </a>
-                <a href="https://www.facebook.com/pg/covenground" className="contact-page__details__icon">
-                  <FacebookIcon/>
-                </a>
-                <a href="https://www.instagram.com/covenground" className="contact-page__details__icon">
-                  <InstagramIcon/>
-                </a>
+								<a href="mailto:covenground@yahoo.com" className="contact-page__details__icon">
+									<EmailIcon />
+								</a>
+								<a
+									href="https://www.facebook.com/pg/covenground"
+									className="contact-page__details__icon"
+								>
+									<FacebookIcon />
+								</a>
+								<a href="https://www.instagram.com/covenground" className="contact-page__details__icon">
+									<InstagramIcon />
+								</a>
 							</div>
 						</Col>
 					</Row>

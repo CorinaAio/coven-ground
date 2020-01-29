@@ -15,5 +15,6 @@
 	"project_client": "Client",
 	"project_date": "Date",
 	"contact__title": "Get in touch",
-	"contact__description": "If you want us to help you with a project, you can contact us on one of your accounts"
+	"contact__description": "If you want us to help you with a project, you can contact us on one of your accounts",
+	"blog_no_blog_posts": "Sadly there are no blog posts at the moment"
 }
