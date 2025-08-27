@@ -15,7 +15,7 @@ const AboutPage = ({ intl: { formatMessage }, data }) => {
         description={formatMessage({ id: "about__meta-description" })}
       />
 
-      <div>About page</div>
+      <div>About page modified</div>
     </Layout>
   );
 };
